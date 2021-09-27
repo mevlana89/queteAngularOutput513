@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'queteAngularOutput513';
+
+  public onomatopoeias : string[] = ["onomatopia1","ono2"];
+
+  onReceiveNewOnomatopia(onomatopia: any):void  {
+    //this.onomatopoeias=undefined;
+    console.log("onReceiveNewOnomatopia");
+    this.onomatopoeias.push(onomatopia);
+    
+    console.log(this.onomatopoeias);
+  }
 }
